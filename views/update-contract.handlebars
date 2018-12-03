@@ -1,0 +1,16 @@
+<h1>Update {{contract.contract_id}}:</h1>
+<form id="update-contract" action="/updatecontract" method="post">
+    Year: <input type="number" name="year_input" value="{{contract.yearly}}"><br>
+    Clength: <input type="number" name="length_input" value="{{contract.length}}"><br>
+    Total: <input type="number" name="total_input" value="{{contract.total}}"><br>  
+    Athlete: <select name="sid">
+      {{#each althete}}
+      <option value="{{athlete_id}}" name="athlete_id">{{first_name}}</option>
+      <br>
+      {{/each}}
+    </select> 
+    <br><br>
+</form>
+<button onclick="updatecontract({{contract.contract_id}})">Update</button>
+    
+

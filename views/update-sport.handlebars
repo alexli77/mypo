@@ -1,0 +1,7 @@
+<h1>Update {{sport.name}}:</h1>
+<form id="update-sport" action="/updatesport" method="post">
+    Sport name: <input type="text" name="name" value="{{sport.name}}"><br>
+    
+    
+</form>
+<button onclick="updatesport({{sport.sport_id}})">Update</button>

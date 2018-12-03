@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS340 - Final Project</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        {{#each jsscripts}}
+        <script src="/static/scripts/{{this}}"></script>
+        {{/each}}        
+    </head>
+    <body>
+        <header class="header-fixed">
+            <div class="header-limiter">
+                <nav>
+                    <a href="/">Home </a>
+                    <a href="/athlete">Athlete</a>
+                    <a href="/country">Country</a>
+                    <a href="/contract">Contract</a>
+                    <a href="/brand">Brand</a>
+                    <a href="/sport">Sport</a>
+
+                </nav>
+            </div>
+        </header>
+
+        {{{ body }}}
+
+
+
+    </body>
+</html>

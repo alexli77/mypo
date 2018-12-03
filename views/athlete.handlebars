@@ -1,0 +1,69 @@
+
+
+    
+    
+<h3>Add new athlete:</h3>
+    <form id="add-athlete" action="/athlete" method="post">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    Gender: <input type="text" name="gender"><br>
+
+    
+    Country: <select name="cid"> 
+        {{#each country}}
+      <option value="{{country_id}}" name="country_id">{{name}}</option>
+
+        {{/each}}
+    </select><br>
+
+    Sport: <select name="sid"> 
+        {{#each sport}}
+        <option value="{{sport_id}}" name="sport_id">{{name}}</option>
+
+        {{/each}}
+    </select><br>
+    
+    Brand: <select name="bid"> 
+        {{#each brand}}
+        <option value="{{brand_id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
+    
+
+    
+    
+    
+    <input type="submit" value="Submit">
+    </form>
+<br/>
+    
+    
+<h3>Current Athlete:</h3>
+<table>
+    <thead> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Sport</th>
+        <th>Brand</th>  
+
+    </thead> 
+    <tbody> 
+        {{#each athlete}} 
+        <tr> 
+            <td>{{fname}}</td> 
+            <td>{{lname}}</td> 
+            <td>{{gender}}</td> 
+            <td>{{country}}</td>
+            <td>{{sport}}</td> 
+            <td>{{brand}}</td> 
+
+            
+            <td><button onclick="deleteAthlete({{athlete_id}})">Delete</button></td>
+            <td><a href="/athlete/{{athlete_id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+

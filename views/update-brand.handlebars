@@ -1,0 +1,7 @@
+<h1>Update {{brand.name}}:</h1>
+<form id="update-brand" action="/updateBrand" method="post">
+    Brand name: <input type="text" name="name" value="{{brand.name}}"><br>
+    CEO name: <input type="text" name="ceo_input" value="{{brand.ceo}}"><br>
+    Found Year: <input type="number" name="year_input" value="{{brand.foundyear}}"><br>    
+</form>
+<button onclick="updateBrand({{brand.brand_id}})">Update</button>

@@ -1,0 +1,35 @@
+
+    
+    
+<h3>Add new Country:</h3>
+<form id="add-country" action="/country" method="post">
+    Country name: <input type="text" name="cname_input"><br>
+    
+    
+    
+    
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+    
+    
+<h3>Current Country:</h3>
+<table>
+    <thead> 
+        <th>Country Name</th> 
+   
+
+    </thead> 
+    <tbody> 
+        {{#each country}} 
+        <tr> 
+            <td>{{name}}</td> 
+      
+
+            
+            <td><button onclick="deleteCountry({{country_id}})">Delete</button></td>
+            <td><a href="/country/{{country_id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 

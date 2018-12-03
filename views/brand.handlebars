@@ -1,0 +1,45 @@
+
+    
+    
+<h3>Add new Brands:</h3>
+<form id="add-brand" action="/brand" method="post">
+    Brand Name: <input type="text" name="name_input"><br>
+    
+    CEO: <input type="text" name="ceo_input"><br>
+    Year found: <input type="number" name="year_input"><br>
+
+    
+    
+    
+    
+    
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+    
+    
+<h3>Current Brands:</h3>
+<table>
+    <thead> 
+        <th>Brand Name</th> 
+        <th>CEO</th> 
+        <th>Year Found</th>
+         
+
+    </thead> 
+    <tbody> 
+                {{#each brand}}
+ 
+        <tr> 
+            <td>{{name}}</td> 
+            <td>{{ceo}}</td> 
+            <td>{{foundyear}}</td> 
+          
+            
+            <td><button onclick="deleteBrand({{brand_id}})">Delete</button></td>
+            <td><a href="/brand/{{brand_id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+</html>

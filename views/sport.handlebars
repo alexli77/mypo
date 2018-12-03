@@ -1,0 +1,34 @@
+
+    
+    
+<h3>Add new Sports:</h3>
+<form id="add-sport" action="/sport" method="post">
+    Sport name: <input type="text" name="sname_input"><br>
+    
+    
+    
+    
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+    
+    
+<h3>Current Sports:</h3>
+<table>
+    <thead> 
+        <th>Sport Name</th> 
+   
+
+    </thead> 
+    <tbody> 
+        {{#each sport}} 
+        <tr> 
+            <td>{{name}}</td> 
+
+            
+            <td><button onclick="deleteSport({{sport_id}})">Delete</button></td>
+            <td><a href="/sport/{{sport_id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 

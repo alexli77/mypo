@@ -1,0 +1,51 @@
+
+    
+    
+<h3>Add new Contracts:</h3>
+<form id="add-contract" action="/contract" method="post">
+    
+    Year: <input type="number" name="yearly"><br>
+    length: <input type="number" name="length"><br>
+    Total: <input type="number" name="total"><br>
+
+    Athlete: <select name="aid"> 
+        {{#each athlete}}
+      <option value="{{athlete_id}}" name="athlete_id">{{fname}}</option>
+        {{/each}}
+    </select><br>
+    
+    
+    
+    
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+    
+    
+<h3>Current Countract:</h3>
+<table>
+    <thead> 
+        <th>Year</th> 
+        <th>length</th> 
+        <th>Total</th>
+        <th>Name</th>
+   
+
+    </thead> 
+    <tbody> 
+             {{#each contract}}
+
+        <tr> 
+            <td>{{yearly}}</td> 
+            <td>{{length}}</td> 
+            <td>{{total}}</td>
+            <td>{{athlete}}</td>
+
+          
+            
+            <td><button onclick="deleteContract({{contract_id}})">Delete</button></td>
+            <td><a href="/contract/{{contract_id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
